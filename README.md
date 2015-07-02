@@ -12,10 +12,6 @@ This material was developed for FOSS4G Europe 2015 workshop.
 
 ## How to use this tutorial
 
-Start GRASS GIS, from command line:
-
-    grass7
-
 Navigate to the directory where you want to work and clone this
 repository (unless you already downloaded a copy):
 
@@ -24,6 +20,10 @@ repository (unless you already downloaded a copy):
 Navigate to the repository directory:
 
     cd python-grass-addon
+
+Start GRASS GIS, from command line, using the North Carolina dataset:
+
+    grass7
 
 Run (supposing that you are already in GRASS command line):
 
