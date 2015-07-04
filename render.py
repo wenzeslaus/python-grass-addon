@@ -12,17 +12,17 @@ def view(rasters=None, vectors=None,
          pngfile=None, width=640, height=480,
          transparent=True, read_file=True, truecolor=True,
          engine='cairo', compression=9, rkw=None, vkw=None):
-    """Return an IPython image object rendered by GRASS.
+    """Return an IPython image object rendered by GRASS GIS.
 
     Parameters
     -----------
 
     rasters: list
-        List with the raster name to be rendered
+        List with the raster map name to be rendered
     vectors: list
-        List with the vector name to be rendered
+        List with the vector map name to be rendered
     pngfile: path
-        Path to the PNG file, default create a temporary file
+        Path to the PNG file, default creates a temporary file
     width: int
         Width size of the image
     height: int

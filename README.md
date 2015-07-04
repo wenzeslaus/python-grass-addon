@@ -21,11 +21,11 @@ Navigate to the repository directory:
 
     cd python-grass-addon
 
-Start GRASS GIS, from command line, using the North Carolina dataset:
+Start GRASS GIS, from command line, using the North Carolina sample dataset:
 
     grass7
 
-Run (supposing that you are already in GRASS command line):
+Run (supposing that you are already in a GRASS GIS session) on command line:
 
     ipython notebook
 
