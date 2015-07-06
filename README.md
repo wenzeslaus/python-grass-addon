@@ -65,7 +65,7 @@ to do thanks to Docker.
     tar xvf master.tar.gz
 
 No you can get the basic GRASS GIS image. Note that if you user does not have permissions
-to use docker (the usual defaut), you have to prefix the `docker` command with `sudo`.
+to use docker (the usual defaut), you have to prefix the `docker` command with `sudo`. The same applies for scripts used futher on which are using the `docker` command.
 
     docker build github.com/wenzeslaus/grass-gis-docker
 
