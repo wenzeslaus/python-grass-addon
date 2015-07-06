@@ -69,12 +69,11 @@ to use docker (the usual defaut), you have to prefix the `docker` command with `
 
     docker build github.com/wenzeslaus/grass-gis-docker
 
-If you don't have this repository downloaded, download required files now
-(here we have a little duplication since we already downloaded the Notebooks).
+To create the image and containers we need some files from this repository (we got its content in previous steps). We use `mv` because we don't need those files to be compied to the containers later.
 
-    wget https://raw.githubusercontent.com/wenzeslaus/python-grass-addon/master/Dockerfile
-    wget https://raw.githubusercontent.com/wenzeslaus/python-grass-addon/master/run_containers.sh
-    wget https://raw.githubusercontent.com/wenzeslaus/python-grass-addon/master/command_containers.sh
+    mv python-grass-addon-master/Dockerfile .
+    mv python-grass-addon-master/run_containers.sh .
+    mv python-grass-addon-master/command_containers.sh .
 
 Build a Docker image with sample dataset and Notebooks.
 
