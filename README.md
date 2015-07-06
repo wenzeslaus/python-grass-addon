@@ -21,11 +21,11 @@ Navigate to the repository directory:
 
     cd python-grass-addon
 
-Start GRASS GIS, from command line, using the North Carolina dataset:
+Start GRASS GIS, from command line, using the North Carolina sample dataset:
 
     grass7
 
-Run (supposing that you are already in GRASS command line):
+Run (supposing that you are already in a GRASS GIS session) on command line:
 
     ipython notebook
 
@@ -46,6 +46,61 @@ Don't worry if we won't cover all the topics during the workshop, all materials 
 ## Required knowledge
 
 Participants should have basic knowledge of GIS, basic knowledge of GRASS GIS and basic knowledge of Python.
+
+
+## Set up a server
+
+When organizing a workshop, it might be advantageous to use a server with IPython Notebook
+rather then setting up the environment on participant's computers. When IPython Notebook
+is used on a server, participants will need only a browser. All server-side work is easy
+to do thanks to Docker.
+
+    mkdir workdir
+    cd workdir
+
+    wget http://grass.osgeo.org/sampledata/north_carolina/nc_basic_spm_grass7.tar.gz
+    wget https://github.com/wenzeslaus/python-grass-addon/archive/master.tar.gz
+
+    tar xvf nc_basic_spm_grass7.tar.gz
+    tar xvf master.tar.gz
+
+No you can get the basic GRASS GIS image. Note that if you user does not have permissions
+to use docker (the usual defaut), you have to prefix the `docker` command with `sudo`.
+
+    docker build github.com/wenzeslaus/grass-gis-docker
+
+If you don't have this repository downloaded, download required files now
+(here we have a little duplication since we already downloaded the Notebooks).
+
+    wget https://raw.githubusercontent.com/wenzeslaus/python-grass-addon/master/Dockerfile
+    wget https://raw.githubusercontent.com/wenzeslaus/python-grass-addon/master/run_containers.sh
+    wget https://raw.githubusercontent.com/wenzeslaus/python-grass-addon/master/command_containers.sh
+
+Build a Docker image with sample dataset and Notebooks.
+
+    docker build -t wenzeslaus/python-grass-addon .
+
+Create a file with users you want to create an container for. The file must contain
+emails at the beginning of each line (it can be for example CSV, double quote at the beginning
+is ignored).
+
+    john@university.edu
+    jsmith@example.com
+
+Now you can start:
+
+    ./run_containers.sh workshop_atendees.txt 9000
+
+This will give you list of URLs and passwords with associated usernames. Note that
+the atendees will have to get through "untrusted connection" dialog in their browsers
+because the certificate used is self-signed.
+
+The above command will also create a file named `containers_workshop_atendees.txt`
+with names of conatiners. For further actions, if they are simple enough,
+you can use a prepared script. For example, to get rid of the containers use:
+
+    ./command_conatiners.sh stop containers_workshop_atendees.txt
+    ./command_conatiners.sh rm containers_workshop_atendees.txt
 
 
 ## Authors
