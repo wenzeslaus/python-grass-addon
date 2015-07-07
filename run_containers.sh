@@ -5,18 +5,32 @@ set -u
 
 if [ "$#" -ne 2 ]
 then
-  echo "Usage: $0 people.txt start_port"
+  echo "Usage:"
+  echo "  $0 people.txt start_port"
+  echo "  $0 num_of_people start_port"
+  exit 1
+fi
+
+if [ -f $1 ]
+then
+  people_file_base=$(basename $1)
+  containers_file=containers_${people_file_base%.*}.txt
+  names=$(sed -e 's/"\?\(.*\)@.*/\1/g' $1)
+elif [ -n "$1" ] && [ -z "${1##[0-9]}" ]
+then
+  containers_file=containers_$(date +"%Y-%m-%d_%H-%M").txt
+  names=$(seq -f "%.0f_of_$1" $1)
+else
+  echo "'$1' is not a file or integer"
   exit 1
 fi
 
 port=$2;
 
-people_file_base=$(basename $1)
-containers_file=containers_${people_file_base%.*}.txt
 # create an empty file
 > $containers_file
 
-for NAME in $(sed -e 's/"\?\(.*\)@.*/\1/g' $1)
+for NAME in $names
 do
     user=$NAME
     password=$(pwgen -s -B 13 1)

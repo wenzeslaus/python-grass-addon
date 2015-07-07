@@ -90,12 +90,18 @@ Now you can start:
 
     ./run_containers.sh workshop_atendees.txt 9000
 
-This will give you list of URLs and passwords with associated usernames. Note that
+Alternatively, you can just specify number of conatiners you want to create:
+
+    ./run_containers.sh 15 9000
+
+This will give you list of URLs and passwords with associated usernames. Usernames are
+used only to keep track of containers and to distribute the credentials. Note that
 the atendees will have to get through "untrusted connection" dialog in their browsers
 because the certificate used is self-signed.
 
 The above command will also create a file named `containers_workshop_atendees.txt`
-with names of conatiners. For further actions, if they are simple enough,
+(or `containers_dateandtime.txt`) with names of conatiners.
+For further actions, if they are simple enough,
 you can use a prepared script. For example, to get rid of the containers use:
 
     ./command_conatiners.sh stop containers_workshop_atendees.txt
