@@ -64,8 +64,8 @@ to do thanks to Docker.
     tar xvf nc_basic_spm_grass7.tar.gz
     tar xvf master.tar.gz
 
-No you can get the basic GRASS GIS image. Note that if you user does not have permissions
-to use docker (the usual defaut), you have to prefix the `docker` command with `sudo`. The same applies for scripts used futher on which are using the `docker` command.
+Now you can get the basic GRASS GIS image. Note that if you user does not have permissions
+to use docker (the usual defaut), you have to prefix the `docker` command with `sudo`. The same applies for scripts used futher on which are using the `docker` command. If you already have the image, you can skip this step.
 
     docker build github.com/wenzeslaus/grass-gis-docker
 
@@ -75,7 +75,7 @@ To create the image and containers we need some files from this repository (we g
     mv python-grass-addon-master/run_containers.sh .
     mv python-grass-addon-master/command_containers.sh .
 
-Build a Docker image with sample dataset and Notebooks.
+Build a Docker image with sample dataset and Notebooks. If you are using your image for GRASS GIS (see above), be sure you have the right image name in the Dockerfile (used by following command).
 
     docker build -t wenzeslaus/python-grass-addon .
 
