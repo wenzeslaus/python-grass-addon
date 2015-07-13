@@ -108,6 +108,24 @@ you can use a prepared script. For example, to get rid of the containers use:
     ./command_conatiners.sh rm containers_workshop_atendees.txt
 
 
+## Instructions for participants when IPython Notebook server is used
+
+You have obtained URL which looks like:
+
+    https://fatra.cnr.ncsu.edu:9503
+
+Type it precisely to the web browser including the *s* at the end of
+`https`, note also that port number is specified (the number at the end
+separated from domain by a colon.
+
+You browser will warn you about invalid security certificate. In this
+case, you can safely add security exception. The reason for
+the message is that the certificate is self-signed.
+
+Finally, enter the password you were provided with. Then you should
+see a list of notebooks as displayed by IPython Notebook.
+
+
 ## Authors
 
 * Pietro Zambelli, European Research Academy
