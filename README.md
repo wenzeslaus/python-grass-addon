@@ -12,6 +12,16 @@ This material was developed for FOSS4G Europe 2015 workshop.
 
 ## How to use this tutorial
 
+### Using only GRASS GIS
+
+Start GRASS GIS on you computer. Browse through IPython Notebooks as rendered on GitHub.
+To do this you just need to click on one of the files with the suffix `.ipynb`.
+In GRASS GIS in *Layer Manager* window, select *Python shell* in the bottom
+to get an interactive Python console where you can input, edit and run the examples.
+You may want to make the window bigger to have more space for the code.
+
+### With IPython and Git
+
 Navigate to the directory where you want to work and clone this
 repository (unless you already downloaded a copy):
 
@@ -28,6 +38,9 @@ Start GRASS GIS, from command line, using the North Carolina sample dataset:
 Run (supposing that you are already in a GRASS GIS session) on command line:
 
     ipython notebook
+
+You will get a website in a web browser where you can select individual Notebooks,
+edit and run the examples.
 
 
 ## Abstract
