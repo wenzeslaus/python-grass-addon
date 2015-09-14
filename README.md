@@ -139,6 +139,13 @@ Finally, enter the password you were provided with. Then you should
 see a list of notebooks as displayed by IPython Notebook.
 
 
+## When and where the workshop was presented
+
+* North Carolina State Univeristy, test run (2 hours)
+* FOSS4G Europe 2015, Como, Italy (4 hours)
+* North Carolina State Univeristy, workshop for a geovisualization class (2 hours), [recording available](https://www.youtube.com/watch?v=PX2UpMhp2hc)
+
+
 ## Authors
 
 * Pietro Zambelli, European Research Academy
