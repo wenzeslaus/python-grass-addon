@@ -3,7 +3,7 @@
 This material was developed for FOSS4G Europe 2015 workshop.
 
 <a href='http://grass.osgeo.org' target='_blank'>
- <img src="grass_gis_logo.png" width=200 alt="GRASS GIS logo" />
+ <img src="grass_gis_logo.png" alt="GRASS GIS logo" />
 </a>
 <a href='http://europe.foss4g.org/2015/' target='_blank'>
  <img src="foss4g_europe_2015_logo.png" alt="FOSS4G-E 2015 logo" />
