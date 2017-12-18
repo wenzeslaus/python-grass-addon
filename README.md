@@ -24,7 +24,7 @@ You may want to make the window bigger to have more space for the code.
 Navigate to the directory where you want to work and clone this
 repository (unless you already downloaded a copy):
 
-    git clone git@github.com:wenzeslaus/python-grass-addon.git
+    git clone https://github.com/wenzeslaus/python-grass-addon.git
 
 Navigate to the repository directory:
 
